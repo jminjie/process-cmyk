@@ -1,6 +1,6 @@
 # Converting RGB to Process CMYK
 
-This process boils down to estimating one color as a combination of a set of 4 other colors. When the process is RGB to CMYK there are shortcuts we can take, but for process CMYK colors, which are slightly different, we can go to linear algebra.
+This conversion boils down to estimating one color as a combination of a set of 4 other colors. When the conversion is from RGB to true CMYK there are shortcuts we can take, but to convert to process CMYK colors, which are slightly different, we can go to linear algebra.
 
 Essentially we can treat a color as a 4d vector. We want to estimate a given target color x as a combination of four other colors v1, v2, v3, v4, added together at a certain proportion. This is the same as calculating a linear combination of four vectors that sums to the target vector. (Actually in a linear combination you can subtract vectors, but here we need to restrict the space so we can only add vectors since you can't print negative ink.)
 
