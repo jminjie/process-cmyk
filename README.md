@@ -20,10 +20,15 @@ After runnnig the code to calculate the approximation and the coefficients:
 ```
 proj_x= [ 54, 173, 175 ] #  this is the approximation of x that we are targetting
 c = [255, 0, 70, 0] # these are the coefficients, scaled to 255
+
+# compare this to the typical CMYK conversion [79, 0, 13, 26]
 ```
 
-You can verify this using an online [color mixer](https://colordesigner.io/color-mixer), using the process CMYK values as base swatches. If we mix together a proportion of 255 cyan to 70 yellow, we get something close to the correct color. (Since I'm not totally sure about how the pattern is created on your end, it would be great to verify that this works with your demo as well.)
+We can double-check this calculation using an online [color mixer](https://colordesigner.io/color-mixer), using the process CMYK values as base swatches. If we mix together a proportion of 255 cyan to 70 yellow, we get something close to the correct color. (Since I'm not totally sure about how the pattern is created on your end, it would be great to verify that this works with your demo as well.)
 
+See the original color here, and the typical CMYK conversion:
 ![Original color](original_color.png)
+
+See the digitally mixed approximate color using the process CMYK and our vector math.
 ![Mixed color](mix.png)
 
