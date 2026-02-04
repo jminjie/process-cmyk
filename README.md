@@ -26,6 +26,8 @@ c = [255, 0, 70, 0] # these are the coefficients, scaled to 255
 
 We can double-check this calculation using an online [color mixer](https://colordesigner.io/color-mixer), using the process CMYK values as base swatches. If we mix together a proportion of 255 cyan to 70 yellow, we get something close to the correct color. (Since I'm not totally sure about how the pattern is created on your end, it would be great to verify that this works with your demo as well.)
 
+EDIT - I think that possibly the K value calculation should still be done the way Jack is doing it. I think the scaling up to 255 at the end that I added might tend to brighten dark colors.
+
 ## Reference images
 See the original color here, and the typical CMYK conversion:
 ![Original color](original_color.png)
