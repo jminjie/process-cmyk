@@ -2,7 +2,7 @@
 
 This process boils down to estimating one color as a combination of a set of 4 other colors. When the process is RGB to CMYK there are shortcuts we can take, but for process CMYK colors, which are slightly different, we can go to linear algebra.
 
-Essentially we can treat a color as a 4d vector. We want to estimate a given target color x as a combination of four other colors v1, v2, v3, v4, added together at a certain proportion. This is the same as calculating a linear combination of four vectors that sums to the target vector.
+Essentially we can treat a color as a 4d vector. We want to estimate a given target color x as a combination of four other colors v1, v2, v3, v4, added together at a certain proportion. This is the same as calculating a linear combination of four vectors that sums to the target vector. (Actually in a linear combination you can subtract vectors, but here we need to restrict the space so we can only add vectors since you can't print negative ink.)
 
 The code in `colorcalc.py` does this using `numpy` and `scipy`. First it defines v1 through v4 as the process CMYK colors. Then it uses linear algebra to project x into the color space (this projection is lossy because we cannot capture every color). Finally it determines the coefficients that each of v1 through v4 need to be multiplied by to get this approximate vector. This gives us our own version of a CMYK converter.
 
